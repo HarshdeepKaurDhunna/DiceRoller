@@ -34,7 +34,7 @@ namespace DiceRoller.Models
         }
 
         //set the value for  currentUpSide side to the  newUpSide
-        public void getCurrentUpSide(int newUpSide) 
+        public void setCurrentUpSide(int newUpSide) 
         {
             if (sidesNumber >= 1 && newUpSide <= sidesNumber)
                 currentUpSide = newUpSide;
@@ -66,7 +66,7 @@ namespace DiceRoller.Models
          */
         public int getCurrentUpSide()
         {
-            return this.currentUpSide;
+            return currentUpSide;
         }
 
         /**
