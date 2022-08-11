@@ -19,7 +19,7 @@ namespace DiceRoller.Models
         // will be set to their default values.
         public Die()
         {
-            diceType = "D6";
+            diceType = "d6";
             sidesNumber = 6;
             rollDice(); // calling the rollDice to get value for current side up
         }
