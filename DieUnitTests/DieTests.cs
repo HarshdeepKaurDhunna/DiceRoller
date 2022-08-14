@@ -87,7 +87,7 @@ namespace DieUnitTests
         * on the getter methods of Die class
         * @TestMethod
         */
-        [TestMethod]
+       /* [TestMethod]
         [DataRow(3, 2)]
         [DataRow(4, 2)]
         [DataRow(8, 2)]
@@ -99,7 +99,7 @@ namespace DieUnitTests
             Die die = new Die(sides);
             die.setCurrentUpSide(newSides);
             die.getSidesNumber().Should().BeInRange(1, sides);
-        }
+        }*/
 
         [TestMethod]
         public void DefaultGetDiceTypeValue()

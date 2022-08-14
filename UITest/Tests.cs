@@ -46,8 +46,39 @@ namespace UITest
             Assert.IsTrue(app.Query(c => c.Marked("d20")).Any());
         }
 
-      
 
+        [Test]
+        [Category("UI")]
+        public void OptionsCanBeChecked()
+        {
+            app.Tap(c => c.Marked("d4"));
+
+            Assert.IsTrue(app.Query(c =>
+            c.Marked("d4")// Look for itens marked du
+            .Invoke("isChecked")) // call the isChecked method of the RadioButton 
+            .FirstOrDefault() // get the first result (there should only be one)
+            .Equals(true) // check that the view is checked (isChecked true)
+            );
+
+            app.Tap(c => c.Marked("d6"));
+
+            Assert.IsTrue(app.Query(c =>
+            c.Marked("d4")// Look for itens marked du
+            .Invoke("isChecked")) // call the isChecked method of the RadioButton 
+            .FirstOrDefault() // get the first result (there should only be one)
+            .Equals(true) // check that the view is checked (isChecked true)
+            );
+
+            app.Tap(c => c.Marked("d4"));
+
+            Assert.IsTrue(app.Query(c =>
+            c.Marked("d4")// Look for itens marked du
+            .Invoke("isChecked")) // call the isChecked method of the RadioButton 
+            .FirstOrDefault() // get the first result (there should only be one)
+            .Equals(false) // check that the view is checked (isChecked true)
+            );
+
+        }
 
     }
 }
