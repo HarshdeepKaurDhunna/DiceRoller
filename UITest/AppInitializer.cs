@@ -10,7 +10,7 @@ namespace UITest
         {
             return ConfigureApp
                 .Android
-                .installedApp("com.companyname.diceroller")
+                .InstalledApp("com.companyname.diceroller")
                 .StartApp();
         }
     }
