@@ -85,22 +85,41 @@ namespace DieUnitTests
         /**
         * By instatntiang the die class as new object check that all the setters for Die class  
         * on the getter methods of Die class
-        * @TestMethod
+        * @TestMethod 
         */
-       /* [TestMethod]
-        [DataRow(3, 2)]
-        [DataRow(4, 2)]
-        [DataRow(8, 2)]
-        [DataRow(10, 2)]
-        [DataRow(12, 2)]
-        [DataRow(20, 2)]
-        public void SetSideUpSetsValidSide(int sides, int newSides)
-        {
-            Die die = new Die(sides);
-            die.setCurrentUpSide(newSides);
-            die.getSidesNumber().Should().BeInRange(1, sides);
-        }*/
+        /* [TestMethod]
+         [DataRow(3, 2)]
+         [DataRow(4, 2)]
+         [DataRow(8, 2)]
+         [DataRow(10, 2)]
+         [DataRow(12, 2)]
+         [DataRow(20, 2)]
+         public void SetSideUpSetsValidSide(int sides, int newSides)
+         {
+             Die die = new Die(sides);
+             die.setCurrentUpSide(newSides);
+             die.getSidesNumber().Should().BeInRange(1, sides);
+         }*/
 
+        /**
+        * Give us an invalid answer like you can't I just put them away.
+        * @TestMethod 
+        */
+        [TestMethod]
+        [DataRow(3, 2)]
+        [DataRow(5, 10)]
+        [DataRow(10, -12)]
+        public void SetSideUpSetsValidSide(int sides, int newSide) // yet to commit
+        {
+            Die d = new Die(sides);
+            d.setCurrentUpSide(newSide);
+            d.getCurrentUpSide().Should().BeInRange(1, sides);
+            if (newSide >= 1 && newSide <= sides)
+            {
+                d.getCurrentUpSide().Should().Be(newSide);
+            }
+
+        }
         [TestMethod]
         public void DefaultGetDiceTypeValue()
         {
