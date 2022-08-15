@@ -9,28 +9,28 @@
         <!-- stack layout to show the group button -->
         <StackLayout RadioButtonGroup.GroupName="Dice">
             <Label Text="Select a die:" />
-            <RadioButton Content="d4" CheckedChanged="OnRadioButtonChanged"  FontSize="Small" TextColor="#001833" />
-            <RadioButton Content="d6" CheckedChanged="OnRadioButtonChanged"  FontSize="Small" TextColor="#001833" />
-            <RadioButton Content="d8" CheckedChanged="OnRadioButtonChanged"  FontSize="Small" TextColor="#001833" />
-            <RadioButton Content="d10" CheckedChanged="OnRadioButtonChanged" FontSize="Small" TextColor="#001833" />
-            <RadioButton Content="d12" CheckedChanged="OnRadioButtonChanged" FontSize="Small" TextColor="#001833" />
-            <RadioButton Content="d20" CheckedChanged="OnRadioButtonChanged" FontSize="Small" TextColor="#001833" />
+            <RadioButton Content="d4" CheckedChanged="OnRadioButtonChanged"  FontSize="Small"  />
+            <RadioButton Content="d6" CheckedChanged="OnRadioButtonChanged"  FontSize="Small"  />
+            <RadioButton Content="d8" CheckedChanged="OnRadioButtonChanged"  FontSize="Small"  />
+            <RadioButton Content="d10" CheckedChanged="OnRadioButtonChanged" FontSize="Small"  />
+            <RadioButton Content="d12" CheckedChanged="OnRadioButtonChanged" FontSize="Small"  />
+            <RadioButton Content="d20" CheckedChanged="OnRadioButtonChanged" FontSize="Small"  />
 
             <!-- Button to show one die result -->
-            <Button Text="Display one result" Clicked="DisplayResultOne" TextColor="#001833"/>
+            <Button Text="Display one result" Clicked="DisplayResultOne" />
 
             <!-- Button to show Two dice result -->
-            <Button Text="Display two results" Clicked="DisplayTwo" TextColor="#001833"/>
+            <Button Text="Display two results" Clicked="DisplayTwo" />
 
             <!-- Lable to show the first button result -->
             <Label x:Name="result1" FontSize="Large"
                VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="Center" TextColor="#001833"/>
+               HorizontalOptions="Center" />
 
             <!-- Lable to show the second button result -->
             <Label MaxLines="2" x:Name="result2" IsVisible="false" FontSize="Large"
                VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="Center" TextColor="#001833"/>
+               HorizontalOptions="Center" />
             
         </StackLayout>
         
